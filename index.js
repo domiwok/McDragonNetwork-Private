@@ -28,8 +28,8 @@ bot.on("ready", async() => {
 
     let státuszok = [
         "Prefix: !",
-        "IP:wither.gg",
-        "Port:19132"
+        "IP: SOON...",
+        "OWNERS: Domi_wok, IuseBenjii"
     ]
 
     setInterval(function() {
