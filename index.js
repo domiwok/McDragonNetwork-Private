@@ -166,7 +166,7 @@ if(cmd === `${prefix}cat`){
 if(cmd === `${prefix}help`){
     let help_embed = new Discord.MessageEmbed()
     .setColor("PURPLE")
-    .setDescription(`**Prefix**: !\n\n**Ip**: Wither.gg\n**Port**:19132\n\n**Commands**\n*Moderation*\n-Warn\n-Mute - unmute\n-Kick\n-Ban - unban\n-Purge\n*Economy*\n-work \n-pay \n-lb \n-shop\n-slot\n*Fun*\n-Cat\n-Meme\n*More*\n-Suggest\n-ticket\n-report`)
+    .setDescription(`**Prefix**: !\n\n**Ip**: **Soon...**\n**Commands**\n*Moderation*\n-Warn\n-Mute - unmute\n-Kick\n-Ban - unban\n-Purge\n*Economy*\n-work \n-pay \n-lb \n-shop\n-slot\n*Fun*\n-Cat\n-Meme\n*More*\n-Suggest\n-ticket\n-report`)
     .setTimestamp(message.createdAt)
     .setFooter(botname)
 
