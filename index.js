@@ -63,7 +63,6 @@ bot.on("message", async message => {
     if(cmd === `${prefix}suggest`){
         let szavazás_channel = "981867119090221066" 
         const szavazás_ch = bot.channels.cache.get(szavazás_channel)
-        const suggest = args.splice(1, args.length).join(" ") || '__No message provided__';        
 
                 if(args[0]){
                     let szavazas_embed = new Discord.MessageEmbed()
