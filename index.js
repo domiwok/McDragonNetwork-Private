@@ -71,11 +71,21 @@ bot.on("message", async message => {
     }
 
 
-    if(cmd === `${prefix}subemelaradjo)`{
-       message.reply('tataimalartol')
-       message.reply('szuebemelaradjo')
-       message.reply('getamikanfjon')
+        if(cmd === `${prefix}subemelaradjo`){
+        let TesztEmbed = new Discord.MessageEmbed()
+        .setColor("#98AA12")
+        .setAuthor(message.author.username)
+        .setTitle("Teszt Embed!")
+        .addField("subemelaradjo:", "tataimalartol\n szuebemelaradjo\n getamikanfjon\nsjientelauge\nvassujengo\ntraimalalkor\nkekikekloroh\nhomammulutalla\nrunajelsoj")
+        .setThumbnail(message.author.displayAvatarURL())
+        .setImage(message.guild.iconURL())
+        .setDescription(`\`${prefix}\``)
+        .setFooter(`${botname} | ${message.createdAt}`)
+
+        message.channel.send(TesztEmbed)
     }
+    
+    
 
 
 
