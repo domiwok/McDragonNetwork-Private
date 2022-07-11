@@ -45,12 +45,12 @@ bot.on("message", async message => {
     let args = MessageArray.slice(1);
     let prefix = botconfig.prefix;
 
-    const report_channel = "981867086768914452"
+    const report_channel = "996156584629653644"
     const ticket_category_id = "981867381599125524"
     const ticket_role_id = "981867559135625259"
     const support_role_id = "981867423370211359"
-    const mute_role = "981867155802980362"
-    const viprang_id = "981868086716170250"
+    const mute_role = "983107976623718401"
+    const viprang_id = "996156771414585434"
     const ownerid = ["980119581165240430"];
 
 
