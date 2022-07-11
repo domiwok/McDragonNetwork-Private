@@ -58,6 +58,11 @@ bot.on("message", async message => {
 
 
 
+    if(cmd === `${prefix}subemelaradjo)`{
+       message.reply('tataimalartol')
+       message.reply('szuebemelaradjo')
+       message.reply('getamikanfjon')
+
 
 
     if(cmd === `${prefix}suggest`){
