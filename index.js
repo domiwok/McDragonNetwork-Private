@@ -56,6 +56,19 @@ bot.on("message", async message => {
 
 
 
+        if(cmd === `${prefix}subemelaradjo`){
+        let TesztEmbed = new Discord.MessageEmbed()
+        .setColor("#98AA12")
+        .setAuthor(message.author.username)
+        .setTitle("Teszt Embed!")
+        .addField("tataimalartol:"\n "szuebemelaradjo\n getamikanfjon\n ")
+        .setThumbnail(message.author.displayAvatarURL())
+        .setImage(message.guild.iconURL())
+        .setDescription(`\`${prefix}\``)
+        .setFooter(`${botname} | ${message.createdAt}`)
+
+        message.channel.send(TesztEmbed)
+    }
 
 
     if(cmd === `${prefix}subemelaradjo)`{
