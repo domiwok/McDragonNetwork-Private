@@ -60,21 +60,21 @@ bot.on("message", async message => {
 
 
 
-
     if(cmd === `${prefix}suggest`){
+        let szavazás_channel = "981867119090221066" 
         const szavazás_ch = bot.channels.cache.get(szavazás_channel)
 
                 if(args[0]){
                     let szavazas_embed = new Discord.MessageEmbed()
-                    .setAuthor('**Suggestion**')
+                    .setAuthor('Suggestion')
                     .setDescription(args.join("s"))
                     .setColor("RANDOM")
                     .setTimestamp(message.createdAt)
                     .setFooter(bot.user.username)
         
                     szavazás_ch.send(szavazas_embed).then(async msg => {
-                    await msg.react("✅")
-                    await msg.react("❌") 
+                    await msg.react(":white_check_mark:")
+                    await msg.react(":x:") 
                     }) 
                 } else {
                     message.reply("Enter the suggest!")
