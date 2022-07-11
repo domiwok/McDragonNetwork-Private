@@ -52,7 +52,7 @@ bot.on("message", async message => {
     const mute_role = "983107976623718401"
     const viprang_id = "996156771414585434"
     const ownerid = ["980119581165240430"];
-    Const szavazás_channel = "996157727845928960" 
+    const szavazás_channel = "996157727845928960" 
 
 
 
