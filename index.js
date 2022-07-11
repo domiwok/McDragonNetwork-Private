@@ -62,6 +62,7 @@ bot.on("message", async message => {
        message.reply('tataimalartol')
        message.reply('szuebemelaradjo')
        message.reply('getamikanfjon')
+    }
 
 
 
