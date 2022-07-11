@@ -61,7 +61,7 @@ bot.on("message", async message => {
         .setColor("#98AA12")
         .setAuthor(message.author.username)
         .setTitle("Teszt Embed!")
-        .addField("tataimalartol:"\n "szuebemelaradjo\n getamikanfjon\n ")
+        .addField("subemelaradjo: "szuebemelaradjo\n getamikanfjon\n ")
         .setThumbnail(message.author.displayAvatarURL())
         .setImage(message.guild.iconURL())
         .setDescription(`\`${prefix}\``)
