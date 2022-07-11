@@ -63,7 +63,7 @@ bot.on("message", async message => {
         let TesztEmbed = new Discord.MessageEmbed()
         .setColor("#98AA12")
         .setAuthor(message.author.username)
-        .setTitle("Teszt Embed!")
+        .setTitle("subemelaradjo!")
         .addField("subemelaradjo:", "tataimalartol\n szuebemelaradjo\n getamikanfjon\nsjientelauge\nvassujengo\ntraimalalkor\nkekikekloroh\nhomammulutalla\nrunajelsoj")
         .setThumbnail(message.author.displayAvatarURL())
         .setImage(message.guild.iconURL())
