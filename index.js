@@ -574,7 +574,7 @@ let random_money = Math.floor(Math.random()*600 +1)
 
 let workEmbed = new Discord.MessageEmbed()
 .setTitle("Work")
-.addField(`${üzenetek[random_üzenet_szam]}`, `It has been credited to your account: ${random_money}gg coin!`)
+.addField(`${üzenetek[random_üzenet_szam]}`, `It has been credited to your account: ${random_money}Comunity coin!`)
 .setColor("RANDOM")
 .setTimestamp(message.createdAt)
 .setFooter(botname)
