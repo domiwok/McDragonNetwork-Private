@@ -526,7 +526,7 @@ if(cmd === `${prefix}slot`){
 if(cmd === `${prefix}lb`){
     let toplist = Object.entries(money)
     .map(v => `<@${v[1].user_id}> = ${v[1].money}Comunity coin`)
-    .sort((a, b) => b.split("gg coin")[0] - a.split("Comunity coin")[0])
+    .sort((a, b) => b.split("Comunity coin")[0] - a.split("Comunity coin")[0])
     .slice(0, 10)
 
     let LbEmbed = new Discord.MessageEmbed()
