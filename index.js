@@ -417,7 +417,7 @@ if(cmd === `${prefix}money`){
     let MoneyeEmbed = new Discord.MessageEmbed        ()
     .setAuthor(message.author.username)
     .setColor("RANDOM")
-    .addField("egyenleg:", `${selfMoney}gg coin`)
+    .addField("egyenleg:", `${selfMoney}Comunity coin`)
     .setThumbnail(profilkep)
     .setFooter(botname)
 
@@ -435,7 +435,7 @@ if(message.guild){
 
         let DropMoneyEmbed = new Discord.MessageEmbed()
         .setAuthor(message.author.username)
-        .addField("you were lucky!", `${üzenetek[random_üzenet_szam]}that's why you got it: ${random_money}gg coin!`)
+        .addField("you were lucky!", `${üzenetek[random_üzenet_szam]}that's why you got it: ${random_money}Comunity coin!`)
         .setColor("RANDOM")
         .setThumbnail(message.author.displayAvatarURL())
 
@@ -452,7 +452,7 @@ if(message.guild){
 if(cmd === `${prefix}shop`){
     let ShopEmbed = new Discord.MessageEmbed()
         .setAuthor(message.author.username)
-        .setDescription(`${prefix}buy-vip (PRICE: 2000 gg coin)`)
+        .setDescription(`${prefix}buy-vip (PRICE: 2000 Comunity coin)`)
         .setColor("RANDOM")
         .setThumbnail(bot.user.displayAvatarURL())
         message.channel.send(ShopEmbed);
@@ -464,7 +464,7 @@ if(cmd === `${prefix}buy-vip`){
 
     let price = "2000";
     if(message.member.roles.cache.has(viprang_id)) return message.reply("*you have already taken that rank!*")
-    if(selfMoney < price) return message.reply(`you have no money for this rank! Your balance: ${selfMoney}gg coin.`)
+    if(selfMoney < price) return message.reply(`you have no money for this rank! Your balance: ${selfMoney}Comunity coin.`)
 
     money[message.author.id] = {
         money: selfMoney - parseInt(price),
@@ -479,7 +479,7 @@ if(cmd === `${prefix}buy-vip`){
 
 if(cmd === `${prefix}slot`){
     let min_money = 100
-    if(selfMoney < min_money) return message.reply(`you have too little money! Minimum ${min_money}You have to be gg! your balance: ${selfMoney}.`)
+    if(selfMoney < min_money) return message.reply(`you have too little money! Minimum ${min_money}You have to be Comunity! your balance: ${selfMoney}.`)
 
     let tét = Math.round(args[0] *100)/100
     if(isNaN(tét)) return message.reply("please enter an amount!")
@@ -493,7 +493,7 @@ if(cmd === `${prefix}slot`){
     if(slots[result1] === slots[result2] && slots[result3]){
         let wEmbed = new Discord.MessageEmbed()
         .setTitle('🕹gambling | slot machine 🕹')
-        .addField(message.author.username, `you won! your winnings: ${tét*1.6}gg coin`)
+        .addField(message.author.username, `you won! your winnings: ${tét*1.6}Comunity coin`)
         .addField("result:", slots[result1] + slots[result2] + slots[result3])
         .setColor("RANDOM")
         .setTimestamp(message.createdAt)
@@ -507,7 +507,7 @@ if(cmd === `${prefix}slot`){
     } else {
         let wEmbed = new Discord.MessageEmbed()
         .setTitle('🕹 game of chance slot machine 🕹')
-        .addField(message.author.username, `you lost! that's how much you fell: ${tét}gg coin`)
+        .addField(message.author.username, `you lost! that's how much you fell: ${tét}Comunity coin`)
         .addField("result:", slots[result1] + slots[result2] + slots[result3])
         .setColor("RANDOM")
         .setTimestamp(message.createdAt)
@@ -525,8 +525,8 @@ if(cmd === `${prefix}slot`){
 
 if(cmd === `${prefix}lb`){
     let toplist = Object.entries(money)
-    .map(v => `<@${v[1].user_id}> = ${v[1].money}gg coin`)
-    .sort((a, b) => b.split("gg coin")[0] - a.split("gg coin")[0])
+    .map(v => `<@${v[1].user_id}> = ${v[1].money}Comunity coin`)
+    .sort((a, b) => b.split("gg coin")[0] - a.split("Comunity coin")[0])
     .slice(0, 10)
 
     let LbEmbed = new Discord.MessageEmbed()
@@ -564,7 +564,7 @@ if(cmd === `${prefix}pay`){
             user_id: message.author.id
         }
 
-        message.channel.send(`The transaction was successful! your balance: ${selfMoney - pay_money}gg coin`)
+        message.channel.send(`The transaction was successful! your balance: ${selfMoney - pay_money}Comunity coin`)
         
         fs.writeFile("./money.json", JSON.stringify(money), (err) => {
             if(err) console.log(err);
@@ -577,7 +577,7 @@ if(cmd === `${prefix}pay`){
 
 
 if(cmd === `${prefix}work`){
-let cd_role_id = "981867135385092136";
+let cd_role_id = "996334320232960031";
 let cooldown_time =  "5"; 
 
 if(message.member.roles.cache.has(cd_role_id)) return message.reply(`this command can be use every ${cooldown_time}minute!`)
