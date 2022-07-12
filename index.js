@@ -417,7 +417,7 @@ if(cmd === `${prefix}money`){
     let MoneyeEmbed = new Discord.MessageEmbed        ()
     .setAuthor(message.author.username)
     .setColor("RANDOM")
-    .addField("egyenleg:", `${selfMoney}Comunity coin`)
+    .addField("egyenleg:", `${selfMoney}Community  coin`)
     .setThumbnail(profilkep)
     .setFooter(botname)
 
@@ -452,7 +452,7 @@ if(message.guild){
 if(cmd === `${prefix}shop`){
     let ShopEmbed = new Discord.MessageEmbed()
         .setAuthor(message.author.username)
-        .setDescription(`${prefix}buy-vip (PRICE: 2000 Comunity coin)`)
+        .setDescription(`${prefix}buy-vip (PRICE: 2000 Community  coin)`)
         .setColor("RANDOM")
         .setThumbnail(bot.user.displayAvatarURL())
         message.channel.send(ShopEmbed);
@@ -464,7 +464,7 @@ if(cmd === `${prefix}buy-vip`){
 
     let price = "2000";
     if(message.member.roles.cache.has(viprang_id)) return message.reply("*you have already taken that rank!*")
-    if(selfMoney < price) return message.reply(`you have no money for this rank! Your balance: ${selfMoney}Comunity coin.`)
+    if(selfMoney < price) return message.reply(`you have no money for this rank! Your balance: ${selfMoney}Community coin.`)
 
     money[message.author.id] = {
         money: selfMoney - parseInt(price),
@@ -479,7 +479,7 @@ if(cmd === `${prefix}buy-vip`){
 
 if(cmd === `${prefix}slot`){
     let min_money = 100
-    if(selfMoney < min_money) return message.reply(`you have too little money! Minimum ${min_money}You have to be Comunity! your balance: ${selfMoney}.`)
+    if(selfMoney < min_money) return message.reply(`you have too little money! Minimum ${min_money}You have to be Community ! your balance: ${selfMoney}.`)
 
     let tét = Math.round(args[0] *100)/100
     if(isNaN(tét)) return message.reply("please enter an amount!")
@@ -493,7 +493,7 @@ if(cmd === `${prefix}slot`){
     if(slots[result1] === slots[result2] && slots[result3]){
         let wEmbed = new Discord.MessageEmbed()
         .setTitle('🕹gambling | slot machine 🕹')
-        .addField(message.author.username, `you won! your winnings: ${tét*1.6}Comunity coin`)
+        .addField(message.author.username, `you won! your winnings: ${tét*1.6}Community coin`)
         .addField("result:", slots[result1] + slots[result2] + slots[result3])
         .setColor("RANDOM")
         .setTimestamp(message.createdAt)
@@ -507,7 +507,7 @@ if(cmd === `${prefix}slot`){
     } else {
         let wEmbed = new Discord.MessageEmbed()
         .setTitle('🕹 game of chance slot machine 🕹')
-        .addField(message.author.username, `you lost! that's how much you fell: ${tét}Comunity coin`)
+        .addField(message.author.username, `you lost! that's how much you fell: ${tét}Community coin`)
         .addField("result:", slots[result1] + slots[result2] + slots[result3])
         .setColor("RANDOM")
         .setTimestamp(message.createdAt)
@@ -525,7 +525,7 @@ if(cmd === `${prefix}slot`){
 
 if(cmd === `${prefix}lb`){
     let toplist = Object.entries(money)
-    .map(v => `<@${v[1].user_id}> = ${v[1].money}Comunity coin`)
+    .map(v => `<@${v[1].user_id}> = ${v[1].money}Community coin`)
     .sort((a, b) => b.split("Comunity coin")[0] - a.split("Comunity coin")[0])
     .slice(0, 10)
 
@@ -591,7 +591,7 @@ let random_money = Math.floor(Math.random()*600 +1)
 
 let workEmbed = new Discord.MessageEmbed()
 .setTitle("Work")
-.addField(`${üzenetek[random_üzenet_szam]}`, `It has been credited to your account: ${random_money}Comunity coin!`)
+.addField(`${üzenetek[random_üzenet_szam]}`, `It has been credited to your account: ${random_money}Community coin!`)
 .setColor("RANDOM")
 .setTimestamp(message.createdAt)
 .setFooter(botname)
