@@ -51,7 +51,7 @@ bot.on("message", async message => {
     const support_role_id = "997417780120928256"
     
     const trial_category_id = "997390576548839485"
-    const ticket_role_id = "997423491085258762"
+    const trial_role_id = "997423491085258762"
     
     const mute_role = "983107976623718401"
     const viprang_id = "996156771414585434"
