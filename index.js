@@ -29,13 +29,13 @@ bot.on("ready", async() => {
     let státuszok = [
         "Prefix: !",
         "IP: SOON...",
-        "OWNERS: Domi_wok, IuseBenjii"
+        "OWNERS: Domi_wok"
     ]
 
     setInterval(function() {
         let status = státuszok[Math.floor(Math.random()* státuszok.length)]
 
-        bot.user.setActivity(status, {type: "WATCHING"})
+        bot.user.setActivity(status, {type: "Fucking"})
     }, 3000)
 })
 
