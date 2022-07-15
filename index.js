@@ -35,7 +35,7 @@ bot.on("ready", async() => {
     setInterval(function() {
         let status = státuszok[Math.floor(Math.random()* státuszok.length)]
 
-        bot.user.setActivity(status, {type: "Fucking"})
+        bot.user.setActivity(status, {type: "WATCHING"})
     }, 3000)
 })
 
