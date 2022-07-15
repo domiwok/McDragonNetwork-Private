@@ -48,7 +48,11 @@ bot.on("message", async message => {
     const report_channel = "996156584629653644"
     const ticket_category_id = "981867381599125524"
     const ticket_role_id = "981867559135625259"
-    const support_role_id = "981867423370211359"
+    const support_role_id = "997417780120928256"
+    
+    const trial_category_id = "997390576548839485"
+    const ticket_role_id = "997423491085258762"
+    
     const mute_role = "983107976623718401"
     const viprang_id = "996156771414585434"
     const ownerid = ["980119581165240430"];
