@@ -616,9 +616,60 @@ fs.writeFile("./money.json", JSON.stringify(money), (err) => {
     if(err) console.log(err);
 });
 
+//////////////////////////////| trial |/////////////////////////////////////////
+    
+
+if(cmd === `${prefix}trial`){
+
+    let random_num = Math.floor(Math.random() * 9999)
+
+    if(!message.member.roles.cache.has(ticket_role_id)){
+        message.guild.channels.create(`ticket + ${random_num}`, {
+            type: "text",
+            parent: ticket_category_id,
+            permissionOverwrites: [
+                {
+                    id: message.guild.id,
+                    deny: ["VIEW_CHANNEL"]
+                },
+                {
+                    id: message.author.id,
+                    allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "ATTACH_FILES", "ADD_REACTIONS"]
+                },
+                {
+                    id: support_role_id,
+                    allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "ATTACH_FILES", "ADD_REACTIONS"]
+                }
+            ]
+        }).then(async (channels) => {
+            channels.send(`Hi! <@${message.author.id}>!!! The owner or some support arrives soon!...`)
+        })
+
+        message.member.roles.add(ticket_role_id);
+    } else {
+        message.reply("you alredy have a  ticketed!")
+    } 
+}
+
+if(cmd === `${prefix}delte-trial`){
+    if(message.member.roles.cache.has(support_role_id) || message.member.hasPermission("BAN_MEMBERS") ){
+        let ping_ember = message.mentions.members.first()
+        let ping_channel = message.mentions.channels.first()
 
 
+        if(args[0] && args[1] && ping_ember && ping_channel && ping_ember.roles.cache.has(ticket_role_id)) {
 
+            ping_ember.roles.remove(ticket_role_id)
+            ping_channel.delete()
+
+        } else {
+            message.reply(`Please mention a person who has a ticket! Proper use:${prefix}delte-ticket <@member> <channel>`)
+        }
+    } else {
+        message.reply("You are not support!")
+    }
+
+}
 
 
 
